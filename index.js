@@ -2,7 +2,7 @@
 require('dotenv').config()
 const i18n = require('i18n')
 
-const { Client, ActivityType } = require('discord.js')
+const { Client, ActivityType, Collection } = require('discord.js')
 const client = new Client({ intents: 53608447 })
 
 const config = require('./config.json')
