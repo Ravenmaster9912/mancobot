@@ -1,7 +1,29 @@
 {
   "dependencies": {
+    "@discordjs/builders": "^1.14.1",
+    "@discordjs/rest": "^2.6.3",
     "discord.js": "^14.27.0",
     "dotenv": "^18.0.8",
     "i18n": "^0.15.4"
-  }
+  },
+  "name": "mancobot",
+  "version": "1.0.0",
+  "description": "Bot de discord para gente manca",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ravenmaster9912/mancobot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ravenmaster9912/mancobot/issues"
+  },
+  "homepage": "https://github.com/Ravenmaster9912/mancobot#readme"
 }

@@ -1,11 +1,29 @@
-const Discord = require('discord.js')
+// const Discord = require('discord.js')
 require('dotenv').config()
 const i18n = require('i18n')
 
-const client = Discord.client({ intents: [Intents.FLAGS.GUILDS] })
+const { Client, ActivityType } = require('discord.js')
+const client = new Client({ intents: 53608447 })
+
+const config = require('./config.json')
 
 client.once('ready', () => {
-    console.log('To listo')
+    console.log(`Todo listo. ClientTag: ${client.user.tag}`)
+
+    client.user.setActivity("Games", {
+        type: ActivityType.Playing
+    })
 })
 
-client.login(process.env.token)
+client.on('interactionCreate', async interaction => {
+    if (!interaction.isCommand()) return
+
+    const { commandName } = interaction
+
+    if (commandName == 'ping') {
+        await interaction.reply('Pong!')
+    }
+})
+
+// client.login(process.env.token)
+client.login(config.token)
